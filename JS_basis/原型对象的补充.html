@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			
+			
+			function MyFriend(){
+			
+				this.girlFriend = {
+					name:"某某某",
+					age:18+"岁"
+					},
+				MyFriend.prototype.name="jaja",
+				MyFriend.prototype.gender="manman"
+				
+				
+			}
+			
+			var hello = new MyFriend();
+			console.log(hello.girlFriend.name);
+			console.log(hello);
+			
+			console.log(MyFriend === MyFriend.prototype.constructor); //true
+			//属性prototype（指针）指向原型对象 MyFriend.prototype（原型对象，实质也是对象），他有个属性constructor（指针） ，又指向 Person函数对象
+			
+			
+			console.log("name" in hello);//true
+			console.log("gender" in hello);//true
+			console.log("age" in hello);//false
+			//使用in检查对象中是否含有某个属性时,如果对象中有但原型中没有,也会返回true
+			
+			
+			
+			
+			var obj = new Object();
+				obj.name="白嘉乐";
+				obj.age=18+"岁";
+				
+			console.log(obj);
+			
+			console.log("name" in obj);//true
+			console.log(obj.hasOwnProperty("name"));//true
+			//可以使用对象的hasOwnProperty()来检查对象自身中是否含有该属性
+			console.log(obj.hasOwnProperty("hasOwnproperty"));
+			
+			
+		</script>
+	</body>
+</html>

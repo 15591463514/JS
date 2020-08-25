@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+	<head>
+		<title>en</title>
+		<meta charset="UTF-8" />
+	</head>
+	<body>
+		<script type="text/javascript">
+			
+			//console.time("start");
+			
+			var obj = new Object();
+			obj.name = "孙悟空";
+			obj["clothe"] = "至尊宝";
+
+			var n = "clothe";		
+
+			
+			document.write(obj["clothe"]);
+			document.write(n);//错误，返回值：clother    →这个的返回值是一个变量
+			document.write(obj[n]);//返回值：至尊宝	    →这个的返回值是一个对象
+
+			n = "name";
+			document.write(obj[n]);
+			//变量的值改变，输出的值也会改变；
+			
+			var obj2 = new Object();
+			obj2.name = "猪八戒";
+			obj.text = obj2;
+			console.log(obj);
+			console.log("name" in obj);
+
+
+			//console.timeEnd("start");
+			
+			var obj3 = new Object();
+			var obj4 = obj3;
+			obj3.name = "沙和尚";
+			obj4.name = "bai";
+			console.log(obj3.name);
+			console.log(obj4.name);
+			
+			
+			var obj5 = {
+						name:"孙悟空",
+						age:18,
+						gender:"男",
+						};
+						
+			var	obj6 = {
+						name:"哪吒",
+						age:16,
+						gender:"未知",
+						obj5
+						};		
+						
+			console.log(obj5);	
+			console.log(obj6);	
+		</script>
+	</body>
+</html>

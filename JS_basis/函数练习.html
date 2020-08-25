@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			
+			
+			//创建一个函数对象
+			var fun1 = new Function("alert('我很帅');");//不推荐使用
+			fun1();//调用函数
+			
+			
+			//使用函数声明来创建一个函数
+			function fun2(){
+				console.log("xixihaha  dawang ");
+				alert("en");
+				
+			}
+			fun2();//调用函数
+			
+			
+			//使用函数表达式来创建一个函数
+			/* function(){
+				console.log("我是匿名函数中封装的代码");
+			} */    //没有名字无法调用,会报错
+			//因此创建一个变量来保存这个函数
+			var fun3 = function(){
+				console.log("我是匿名函数中封装的代码");
+			}
+			fun3();
+			
+			
+			
+			
+			
+		</script>
+	</body>
+</html>

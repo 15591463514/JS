@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+ </head>
+ <body>
+	<script type="text/javascript">
+/*函数返回值*/		
+		/*
+		function sum(a,b,c){
+			
+			var d = a + b + c;
+			
+			
+		
+			return d;
+		
+		}
+	
+		var result = sum(1,2,3);
+	
+		console.log(result);
+		*/
+
+
+//用户填写信息，然后打印出来
+	//方法一：（必须得按照顺序填写信息）
+		function info(name,gender,age,address){
+		
+			console.log("我是"+name+"，"+gender+"，今年"+age+"岁，住在"+address);
+			
+		}
+		
+		info("石淇升","男",22,"陕西汉中");
+	//方法二：（创建一个对象封装用户信息）
+		function information(o){
+		
+			console.log("我是"+o.name+"，"+o.gender+"，今年"+o.age+"岁，住在"+o.address);
+			
+
+		
+		}
+		
+		var obj = {
+			name:"禹柔西",
+			gender:"女",
+			age:22,
+			address:"陕西汉中"
+		}
+		
+		information(obj);
+	
+
+		function fun(a){
+			
+			a(obj);
+			
+		}
+		fun(information);
+
+
+		(function(){
+
+			alert("我是匿名函数！！");
+
+		})();
+		
+		for(var n in obj){
+		
+			console.log(n +":" + obj[n]);
+		}
+		
+	</script>
+ </body>
+</html>

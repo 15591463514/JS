@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			
+			
+			function createman(name, age, skill) {
+
+				var man1 = {
+					name: name,
+					age: age,
+					skill: skill,
+					sayName: function(){
+						console.log(this.name)
+					}
+				}
+				return man1;
+			}
+
+			var man2 = createman("孙悟空", 18, "72变");
+			console.log(man2);
+			man2.sayName();
+			//每调用一次sayName,都会创建一个新的方法,
+			var man3 = createman("猪八戒", 28, "超级能吃");
+			console.log(man3);
+			man3.sayName();
+			var man4 = createman("韩信", 16, "背水一战");
+			console.log(man4);
+			man4.sayName();
+			
+			//this可以提取出来,这样会大大的提高性能
+			function createdog(name, age, gender) {
+			
+				var dog = {
+					name: name,
+					age: age,
+					gender: gender,
+					sayName:fun
+				}
+				return dog;
+			}
+			
+			function fun(){
+				console.log(this.name)
+			}
+			
+			var dog1 = createdog("哮天犬", 5, "♂");
+			console.log(dog1);
+			dog1.sayName();
+			
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

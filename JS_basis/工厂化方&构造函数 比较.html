@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			//常规方法创建对象（麻烦，任务量大）
+
+			console.log(" ");
+			console.log("//常规方法创建对象");
+
+			var obj1 = {
+				name: "周冬雨",
+				age: "28",
+				sayName: function() {
+					console.log(this.name);
+				}
+			}
+			console.log(obj1);
+			obj1.sayName();
+
+			var obj2 = {
+				name: "刘亦菲",
+				age: "30",
+				sayName: function() {
+					console.log(this.name);
+				}
+			}
+			console.log(obj2);
+			obj2.sayName();
+
+			var obj3 = {
+				name: "关晓彤",
+				age: "20",
+				sayName: function() {
+					console.log(this.name);
+				}
+			}
+			console.log(obj3);
+			obj3.sayName();
+
+
+			//工厂化方法创建对象（可以大量的创建多个对象）
+
+			console.log(" ");
+			console.log("//工厂化方法创建对象");
+
+			function fun(name,age) {
+				var dx = {
+					name: name,
+					age: age,
+					sayHello: function() {
+						console.log(this.name + "今年" + this.age + "岁");
+					}
+				}
+				return dx;
+			}
+
+			var dx1 = fun("哪吒", 10);
+			var dx2 = fun("孙悟空", 1000);
+			var dx3 = fun("太上老君", 10000);
+
+			console.log(dx1);
+			dx1.sayHello();
+
+			console.log(dx2);
+			dx2.sayHello();
+			
+			console.log(dx3);
+			dx3.sayHello();
+
+
+			//构造函数创建对象（可以对创建的对象进行归类）
+			
+			console.log(" ");
+			console.log("//构造函数创建对象");
+			
+			function Star(name, work) {
+					this.name = name;
+					this.work = work;
+					this.sayHello = function() {
+						console.log(this.name + "是一个" + this.work);
+					}
+			}
+			
+			var star1 = new Star("赵丽颖", "演员");
+			var star2 = new Star("张靓颖", "歌手");
+			var star3 = new Star("鞠婧祎", "演员");
+			
+			console.log(star1);
+			star1.sayHello();
+			
+			console.log(star2);
+			star2.sayHello();
+			
+			console.log(star3);
+			star3.sayHello();
+			
+			console.log(" ");
+			
+			function Rich(name, work) {
+					this.name = name;
+					this.work = work;
+					this.sayHello = function() {
+						console.log(this.name + "是" + this.work + "老板");
+					}
+			}
+			
+			var rich1 = new Rich("马云", "阿里巴巴");
+			var rich2 = new Rich("马化腾", "腾讯");
+			var rich3 = new Rich("比尔盖茨", "微软");
+			
+			console.log(rich1);
+			rich1.sayHello();
+			
+			console.log(rich2);
+			rich2.sayHello();
+			
+			console.log(rich3);
+			rich3.sayHello();
+			
+			
+			
+			
+		</script>
+	</body>
+</html>

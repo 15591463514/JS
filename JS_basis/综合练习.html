@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			
+			function Friend(name,age,habit){
+				 this.girlFriend={
+					name:name,
+					age:age+"岁",
+					habit:habit
+					}
+				
+				Friend.prototype.xiao="我是原型對象中的xiao";
+				
+			}
+			var obj1 = new Friend("liuxx",18,"haha");
+			var obj2 = new Friend("zhangxx",20,"wuwu");
+			console.log(obj1);
+			console.log(obj2);
+			
+			
+			
+			function Teacher(name,age,habit){
+				var girlFriend = {
+					name:name,
+					age:age+"岁",
+					habit:habit
+				}
+			}
+				
+			var obj3 = new Teacher("zhangming",27,"enheng");
+			var obj4 = new Teacher("qile",30,"aiya");
+			console.log(obj3);
+			console.log(obj4);
+			
+			
+			function ainiyou(){
+				gf:"wangXX";
+				bf:"jixx"
+				
+				
+			};
+			
+			console.log(ainiyou);
+			
+			
+		</script>
+	</body>
+<ml>
